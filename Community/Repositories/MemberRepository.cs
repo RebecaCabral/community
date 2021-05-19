@@ -6,7 +6,6 @@ namespace Community.Repositories
     using Community.Entities;
     public class MemberRepository
     {
-
         private static List<Member> members = new List<Member>();
 
         public void Add(Member member)
