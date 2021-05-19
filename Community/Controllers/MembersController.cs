@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Community.Entities;
+using Community.Inputs;
+using Community.Repositories;
+using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 
 namespace Community.Controllers
 {
     [ApiController]
-    [Route("members")]
+    [Route("api/members")]
     public class MembersController : ControllerBase
     {
         [HttpPost]
@@ -32,33 +34,5 @@ namespace Community.Controllers
 
             return Ok(members);
         }
-    }
-
-    public class Member
-    {
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public DateTime CreateDate { get; set; }
-    }
-
-    public class MemberRepository
-    {
-        private static List<Member> members = new List<Member>();
-
-        public void Add(Member member)
-        {
-            members.Add(member);
-        }
-
-        public List<Member> Get()
-        {
-            return members;
-        }
-    }
-
-    public class CreateMember
-    {
-        public string Name { get; set; }
-        public string Email { get; set; }
     }
 }

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Community.Entities
+namespace Community.Repositories
 {
+    using Community.Entities;
+
     public class CommunityRepository
     {
         static List<Community> communities = new List<Community>();
