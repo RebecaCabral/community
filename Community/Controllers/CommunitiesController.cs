@@ -5,8 +5,10 @@ namespace Community.Controllers
 {
 
     using Community.Entities;
+    using Community.Inputs;
+    using Community.Repositories;
 
-    [Route("api/[controller]")]
+    [Route("api/communities")]
     [ApiController]
     public class CommunitiesController : ControllerBase
     {
@@ -33,12 +35,5 @@ namespace Community.Controllers
             return Ok(communities);
         }
 
-    }
-
-    //Criação de Comunidade.
-    public class CreateCommunity
-    {
-        public string Name { get; set; }
-        public string Description { get; set; }
     }
 }
