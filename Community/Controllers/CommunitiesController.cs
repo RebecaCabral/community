@@ -52,7 +52,7 @@ namespace Community.Controllers
         public ActionResult DeleteCommunity(Guid id)
         {
             var repository = new CommunityRepository();
-             repository.Remove(id);
+            repository.Remove(id);
 
             return Ok();
         }
