@@ -1,4 +1,6 @@
-﻿namespace Community.Inputs
+﻿using System;
+
+namespace Community.Inputs
 {
     public class CreateMember
     {
