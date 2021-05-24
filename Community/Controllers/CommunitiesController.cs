@@ -27,7 +27,6 @@ namespace Community.Controllers
             return Created("", community);
         }
 
-        // GET
         [HttpGet]
         public ActionResult GetCommunities([FromQuery] string name, [FromQuery] string description, [FromQuery]DateTime data )
         {
