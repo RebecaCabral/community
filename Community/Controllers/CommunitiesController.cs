@@ -11,7 +11,6 @@ namespace Community.Controllers
     [ApiController]
     public class CommunitiesController : ControllerBase
     {
-        // POST
         [HttpPost]
         public ActionResult CreateCommunity([FromBody]CreateCommunity createCommunity)
         {
@@ -28,7 +27,6 @@ namespace Community.Controllers
             return Created("", community);
         }
 
-        // GET
         [HttpGet]
         public ActionResult GetCommunities([FromQuery] string name, [FromQuery] string description, [FromQuery]DateTime date)
         {
