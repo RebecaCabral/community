@@ -11,7 +11,6 @@ namespace Community.Controllers
     [ApiController]
     public class CommunitiesController : ControllerBase
     {
-        // POST
         [HttpPost]
         public ActionResult CreateCommunity([FromBody]CreateCommunity createCommunity)
         {
