@@ -47,7 +47,6 @@ namespace Community.Controllers
             return Ok(community);
         }
 
-        // DELETE
 
         [HttpDelete("{id}")]
         public ActionResult DeleteCommunity(Guid id)
