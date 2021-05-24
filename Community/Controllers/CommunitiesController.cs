@@ -30,10 +30,10 @@ namespace Community.Controllers
 
         // GET
         [HttpGet]
-        public ActionResult GetCommunities([FromQuery] string name, [FromQuery] string description, [FromQuery]DateTime data )
+        public ActionResult GetCommunities([FromQuery] string name, [FromQuery] string description, [FromQuery]DateTime date)
         {
             var repository = new CommunityRepository();
-            var communities = repository.GetNameAndDescription(name, description, data);
+            var communities = repository.GetNameAndDescription(name, description, date);
             return Ok(communities);
         }
 
