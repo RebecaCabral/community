@@ -17,11 +17,11 @@ namespace Community.Repositories
 
         public List<Member> Get(string name)
         {
-            var GetName = members.FindAll(x => x.Name == name);
-            if (GetName.Count == 0)
+            var getName = members.FindAll(x => x.Name == name);
+            if (getName.Count == 0)
                 return members;
             
-            return GetName;
+            return getName;
         }
 
         public void Remove(Guid id)
