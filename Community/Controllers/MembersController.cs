@@ -27,7 +27,7 @@ namespace Community.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetMembers(string name)
+        public ActionResult GetMembers([FromQuery]string name)
         {
             var memberRepository = new MemberRepository();
 
