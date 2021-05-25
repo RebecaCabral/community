@@ -17,6 +17,7 @@ namespace Community.Controllers
             member.CreateDate = DateTime.UtcNow;
             member.Email = createMember.Email;
             member.Name = createMember.Name;
+            member.Id = Guid.NewGuid();
 
             var memberRepository = new MemberRepository();
 
@@ -26,13 +27,21 @@ namespace Community.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetMembers()
+        public ActionResult GetMembers([FromQuery]string name)
         {
             var memberRepository = new MemberRepository();
 
-            var members = memberRepository.Get();
+            var members = memberRepository.Get(name);
 
             return Ok(members);
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult RemoveMember(Guid id)
+        {
+            var repository = new MemberRepository();
+            repository.Remove(id);
+            return Ok();
         }
     }
 }
