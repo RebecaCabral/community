@@ -24,6 +24,7 @@ namespace Community.Repositories
         {
             return communities.Where(x => x.Id == Id).FirstOrDefault();
         }
+        
         public IEnumerable<Community> GetNameAndDescription(string name, string description, DateTime data)
         {
             if (name == null && description == null && data == default)
