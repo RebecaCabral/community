@@ -32,6 +32,7 @@ namespace Community.Repositories
 
             return communities.Where(x => x.Name == name || x.Description == description || x.CreateDate == data);
         }
+        
         public void Remove(Guid Id)
         {
             communities.RemoveAll(x => x.Id == Id);
