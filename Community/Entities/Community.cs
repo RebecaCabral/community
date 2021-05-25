@@ -1,9 +1,7 @@
 ﻿using System;
 
 namespace Community.Entities
-
 {
-    //Represntação de uma comunidade.
     public class Community
     {
         public Guid Id { get; set; }
