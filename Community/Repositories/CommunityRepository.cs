@@ -24,6 +24,7 @@ namespace Community.Repositories
         {
             return communities.Where(x => x.Id == Id).FirstOrDefault();
         }
+        
         public IEnumerable<Community> GetNameAndDescription(string name, string description, DateTime data)
         {
             if (name == null && description == null && data == default)
@@ -31,6 +32,7 @@ namespace Community.Repositories
 
             return communities.Where(x => x.Name == name || x.Description == description || x.CreateDate == data);
         }
+        
         public void Remove(Guid Id)
         {
             communities.RemoveAll(x => x.Id == Id);
